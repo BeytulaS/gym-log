@@ -1,0 +1,14 @@
+mat-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  padding: 3rem 6rem;
+  border-radius: 14px;
+}
+
+mat-form-field {
+  display: inherit;
+  width: 300px;
+}

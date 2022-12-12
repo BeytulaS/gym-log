@@ -19,6 +19,10 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
+      <span class="logo" routerLink="/"
+        ><mat-icon>fitness_center</mat-icon>Gym Log</span
+      >
+
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -29,9 +33,7 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
 
-      <span class="logo" routerLink="/">Gym Log</span>
-
-      <div *ngIf="!(isPhone$ | async)">
+      <div *ngIf="!(isPhone$ | async)" class="navbar-items">
         <a mat-button routerLink="/log">Log</a>
         <a mat-button routerLink="/programs">Browse Programs</a>
         <a mat-button routerLink="/profile">Profile</a>

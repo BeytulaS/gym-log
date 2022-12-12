@@ -1,0 +1,25 @@
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 1.5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.navbar-items > .mat-button {
+  font-size: 1.25rem;
+  transition: all 250ms;
+}
+
+.navbar-items > .mat-button:hover {
+  font-size: 1.5rem;
+  transition: all 250ms;
+  font-size-adjust: 10px;
+}
