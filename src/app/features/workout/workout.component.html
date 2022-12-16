@@ -10,7 +10,10 @@
 
   <div class="exercises">
     <div class="inner-card" *ngFor="let exercise of workout.exercises">
-      <mat-card>{{ exercise.exercise_title }}</mat-card>
+      <mat-card>
+        {{ exercise.exercise_title }} {{ exercise.sets }}x{{ exercise.reps }}
+        {{ exercise.weight }}kg
+      </mat-card>
     </div>
   </div>
 </mat-card>

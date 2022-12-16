@@ -35,7 +35,7 @@ export class WorkoutService {
         if (user) {
           return this.db
             .collection<Workout>('workouts', (ref) =>
-              ref.where('uid', '==', user.uid).orderBy('date')
+              ref.where('uid', '==', user.uid)
             )
             .valueChanges({ idField: 'id' });
         } else {

@@ -27,8 +27,7 @@ export class JournalComponent implements OnInit, OnDestroy {
 
   openWorkoutDialog(): void {
     const dialogRef = this.dialog.open(WorkoutDialogComponent, {
-      width: '400px',
-      data: {},
+      width: '1000px',
     });
 
     dialogRef.afterClosed().subscribe();

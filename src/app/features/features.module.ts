@@ -12,7 +12,12 @@ import { WorkoutDialogComponent } from './dialogs/workout-dialog.component';
 import { WorkoutComponent } from './workout/workout.component';
 
 @NgModule({
-  declarations: [JournalComponent, ProgramsComponent, WorkoutDialogComponent, WorkoutComponent],
+  declarations: [
+    JournalComponent,
+    ProgramsComponent,
+    WorkoutDialogComponent,
+    WorkoutComponent,
+  ],
   imports: [
     CommonModule,
     FeaturesRoutingModule,

@@ -1,13 +1,12 @@
 <main>
   <section class="add-workout">
-    <button mat-raised-button (click)="openWorkoutDialog()">
+    <button mat-raised-button color="accent" (click)="openWorkoutDialog()">
       Track todays workout
     </button>
   </section>
   <section class="journal">
-    <app-workout
-      *ngFor="let workout of workouts"
-      [workout]="workout"
-    ></app-workout>
+    <h2>My previous workouts:</h2>
+    <app-workout *ngFor="let workout of workouts" [workout]="workout">
+    </app-workout>
   </section>
 </main>
