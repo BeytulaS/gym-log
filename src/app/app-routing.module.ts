@@ -12,9 +12,15 @@ const routes: Routes = [
       import('./user/user.module').then((mod) => mod.UserModule),
   },
   {
-    path: '',
+    path: 'journal',
     loadChildren: () =>
       import('./features/features.module').then((mod) => mod.FeaturesModule),
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'routines',
+    loadChildren: () =>
+      import('./routines/routines.module').then((mod) => mod.RoutinesModule),
   },
 ];
 

@@ -1,0 +1,20 @@
+<section class="routines">
+  <h1>Routines by the community</h1>
+  <mat-card class="routineCard" *ngFor="let routine of routines | async">
+    <mat-card-header>
+      <mat-card-title> {{ routine.title }} </mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{ routine.imgUrl }}" alt="fitness photo" />
+    <mat-card-content>
+      <p>
+        {{ routine.description }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>See Details</button>
+    </mat-card-actions>
+  </mat-card>
+  <button mat-raised-button routerLink="/routines/create">
+    Post your routine
+  </button>
+</section>

@@ -7,17 +7,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatDialogModule } from '@angular/material/dialog';
 import { JournalComponent } from './journal/journal.component';
-import { ProgramsComponent } from './programs/programs.component';
 import { WorkoutDialogComponent } from './dialogs/workout-dialog.component';
 import { WorkoutComponent } from './workout/workout.component';
 
 @NgModule({
-  declarations: [
-    JournalComponent,
-    ProgramsComponent,
-    WorkoutDialogComponent,
-    WorkoutComponent,
-  ],
+  declarations: [JournalComponent, WorkoutDialogComponent, WorkoutComponent],
   imports: [
     CommonModule,
     FeaturesRoutingModule,
