@@ -38,10 +38,23 @@
       </button>
 
       <div *ngIf="!(isPhone$ | async)" class="navbar-items">
-        <a mat-button routerLink="/journal">Journal</a>
-        <a mat-button routerLink="/routines">Browse Programs</a>
-        <a mat-button routerLink="/user/profile">Profile</a>
-        <a mat-button routerLink="/user/login">Login</a>
+        <button mat-button routerLink="/journal">Journal</button>
+        <button mat-button routerLink="/routines">Browse Programs</button>
+        <button mat-button routerLink="/user/profile">Profile</button>
+        <button
+          *ngIf="!(afAuth.authState | async)"
+          mat-button
+          routerLink="/user/login"
+        >
+          Login
+        </button>
+        <button
+          *ngIf="afAuth.authState | async"
+          mat-button
+          (click)="afAuth.signOut()"
+        >
+          Logout
+        </button>
       </div>
     </mat-toolbar>
 

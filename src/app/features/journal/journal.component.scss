@@ -1,4 +1,23 @@
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+button {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
 .journal {
   display: flex;
   flex-direction: column;
+}
+
+h2 {
+  text-align: center;
+  padding: 0;
+  margin: 0;
 }

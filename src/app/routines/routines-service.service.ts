@@ -11,8 +11,11 @@ export class RoutinesServiceService {
   constructor(private afAuth: AngularFireAuth, private db: AngularFirestore) {}
 
   getAllRoutines() {
-    return this.db
-      .collection<Routine>('routines')
-      .valueChanges({ idField: 'id' });
+    return new Promise<any>((resolve) => {
+      this.db
+        .collection('routines')
+        .valueChanges()
+        .subscribe((routines) => resolve(routines));
+    });
   }
 }

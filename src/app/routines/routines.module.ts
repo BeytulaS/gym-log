@@ -8,6 +8,7 @@ import { CreatePageComponent } from './create-page/create-page.component';
 
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [DetailPageComponent, ListPageComponent, CreatePageComponent],
@@ -17,6 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
+    MatRadioModule,
   ],
 })
 export class RoutinesModule {}

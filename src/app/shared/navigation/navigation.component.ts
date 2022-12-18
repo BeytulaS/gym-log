@@ -1,6 +1,7 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
-import { map, Observable, shareReplay } from 'rxjs';
+import { map, Observable, shareReplay, Subject } from 'rxjs';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-navigation',
@@ -15,5 +16,8 @@ export class NavigationComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    public afAuth: AngularFireAuth
+  ) {}
 }

@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { Subscription } from 'rxjs';
-import { Routine } from '../routine.model';
-import { RoutinesServiceService } from '../routines-service.service';
 
 @Component({
   selector: 'app-list-page',

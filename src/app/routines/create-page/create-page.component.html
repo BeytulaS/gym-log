@@ -1,1 +1,57 @@
-<p>create-page works!</p>
+<section id="cardWrapper">
+  <mat-card class="createCard">
+    <mat-card-header><h1>Post your routine</h1></mat-card-header>
+    <mat-card-content>
+      <form
+        [formGroup]="routineForm"
+        (ngSubmit)="onSubmit()"
+        class="routineForm"
+      >
+        <mat-form-field>
+          <mat-label>Routine title</mat-label>
+          <input matInput placeholder="Routine title" formControlName="title" />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Image URL</mat-label>
+          <input matInput placeholder="https://..." formControlName="imgUrl" />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Brief description</mat-label>
+          <textarea
+            matInput
+            placeholder="Give a brief description of your routine"
+            formControlName="briefDesc"
+          ></textarea>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Routine details</mat-label>
+          <textarea
+            matInput
+            placeholder="Give an in-depth description of your routine"
+            formControlName="longDesc"
+          ></textarea>
+        </mat-form-field>
+        <mat-label>Difficulty:</mat-label>
+        <mat-radio-group
+          formControlName="difficulty"
+          aria-label="Routine difficulty"
+        >
+          <mat-radio-button value="novice">Novice</mat-radio-button>
+          <mat-radio-button value="intermediate">Intermediate</mat-radio-button>
+          <mat-radio-button value="advanced">Advanced</mat-radio-button>
+        </mat-radio-group>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        mat-raised-button
+        color="accent"
+        [disabled]="routineForm.invalid"
+        (click)="onSubmit()"
+        routerLink="/routines"
+      >
+        Post Routine
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</section>

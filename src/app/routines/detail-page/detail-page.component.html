@@ -1,1 +1,18 @@
-<p>detail-page works!</p>
+<main>
+  <mat-card class="routineCard" *ngIf="routine | async as routine">
+    <mat-card-header>
+      <mat-card-title class="title"> {{ routine.title }} </mat-card-title>
+    </mat-card-header>
+    <img
+      mat-card-image
+      src="{{ routine.imgUrl }}"
+      alt="src\assets\herobackground.jpg"
+      class="cardImg"
+    />
+    <mat-card-content>
+      <p>
+        {{ routine.longDesc }}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</main>

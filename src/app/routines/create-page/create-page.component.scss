@@ -1,0 +1,20 @@
+#cardWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.createCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  padding: 2rem 6rem;
+  margin-top: 3rem;
+}
+
+.routineForm {
+  display: flex;
+  flex-direction: column;
+}
